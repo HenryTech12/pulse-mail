@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+* , *::before , *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-evenly;
+  gap: 1rem;
+  margin: 1rem;
+}
+.content input {
+  height: 3rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.content textarea {
+   resize: none;
+   min-height: 60vh;
+   height: 100%;
+   outline: none;
+   border: none;
+   color: black;
+   padding-left: 0.5rem;
+}
+.content .icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+.icons button {
+  width: 40px;
+  align-content: center;
+  border: none;
+  outline: none;
+}
+.icons button span {
+  font-size: 2.3rem;
+}
+::placeholder {
+  color: black;
+}
