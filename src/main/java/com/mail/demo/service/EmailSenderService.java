@@ -21,17 +21,22 @@ public class EmailSenderService {
        @Value("${spring.mail.password}")
        private String password;
 
-      public void sendMail(String to, String subject, String message) {
+      public void sendMail(MailDTO mailDto) {
          try {
              MimeMessage mime = mailSender.createMimeMessage();
              MimeMessageHelper mail = new MimeMessageHelper(mime,true);
-             mail.setFrom(from);
-             mail.setTo(to);
-             mail.setSubject(subject);
-             mail.setText(message);
+             mail.setFrom(mailDto.getFrom());
+             mail.setTo(mailDto.getTo());
+             mail.setSubject(mailDto.getSubject());
+             mail.setText(mailDto.getBody());
             
+             mailDto.setStatus(Status.MAIL_PENDING);
              mailSender.send(mime);
+             mailDto.setStatus(Status.MAIL_SUCCESS);
          }
-        catch(Exception e) { e.printStackTrace(); }
+        catch(Exception e) {
+             mailDto.setStatus(Status.MAIL_FAILURE);
+            e.printStackTrace(); 
+          }
      }
 }
