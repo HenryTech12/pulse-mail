@@ -1,31 +1,36 @@
-<%@page import="java.util.*"%>
 <!DOCTYPE html>
-<html>
+<html
+   xmlns:th="http://www.thymeleaf.org"
+>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="css/compose.css">
+  <link rel="stylesheet" th:href="@{/css/compose.css}">
 </head>
 
 <body>
    <main class="container">
+     <header>
+       <h2>Compose Your Mail</h2>
+      <p>Send emails quickly and efficiently with our easy-to-use mail composer. Simply enter the recipient's email, subject, and message, and hit send!</p>
+     </header>
      <form>
      <div class="content">
        <section class="icons">
          <button>
            <span class="material-symbols-outlined">attachment</span>
          </button>
-         <button formaction="send">
+         <button>
            <span class="material-symbols-outlined">send</span>
          </button>
        </section>
-       <input type="text" placeholder="From" value="${fromId}">
-       <input type="text" placeholder="To" name="to">
-       <input type="text" placeholder="Subject" name="subject">
-   <textarea placeholder="Compose email" name="message"></textarea>
+       <input type="text" placeholder="From">
+       <input type="text" placeholder="To">
+       <input type="text" placeholder="Subject">
+   <textarea placeholder="Compose email"></textarea>
      </div>
      </form>
    </main>

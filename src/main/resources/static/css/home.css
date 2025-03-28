@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap');
+
+
+* , *::before , *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+}
+.header {
+  width: 100%;
+  height: 3.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .5rem;
+  background: whitesmoke;
+  border-bottom: 0.5px solid lightgray;
+  box-shadow: 0px 0px 5px 0px darkgray;
+  backdrop-filter: blur(1rem);
+}
+.header .labelH {
+  display: block;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  font-family: 'Dancing Script';
+}
+h2 {
+  font-family: 'Pacifico';
+}
+.header .hIcon {
+  font-size: 3rem;
+  display: block;
+}
+.header .login {
+  width: 80px;
+  height: 2.3rem;
+  font-weight: bolder;
+  color: white;
+  background: black;
+  font-family: 'Kanit';
+  font-size: 1.2rem;
+  border: none ;
+  outline: none;
+  border-radius: 25px;
+}
+.content {
+  margin: 0.9rem 0;
+  padding: 1rem;
+}
+.line {
+  width: 90%;
+  height: 1px;
+  background: white;
+  margin: .5rem auto;
+}
+.navbar {
+  width: 80%;
+  min-height: 300px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  display: none;
+  bottom: 0;
+  background: #4888f0;
+  transform-origin: top center;
+  transition: all 0.5s linear;
+}
+.navbar h2 {
+  font-size: 2.3rem;
+  color: white;
+  font-weight: bolder;
+  margin-left: .5rem;
+}
+.navbar .navbar-btns button {
+  width: 90%;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  margin: 0 auto;
+  height: 2.7rem;
+  border-radius: 15px;
+  padding: 0 .8rem;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.navbar ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin: .8rem 0;
+}
+.navbar .close {
+  position: relative;
+  margin-bottom: 1rem;
+  left: 0;
+  right: 0;
+  top: 90%;
+  background: white;
+  width: 90%;
+  border-radius: 15px;
+  color: #4888f0;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.navbar .navbar-btns button > span {
+  font-size: 1.3rem;
+  font-family: 'Kanit';
+}
+.navbar .navbar-btns button:hover > span , .navbar .navbar-btns button:hover {
+  color:#4888f0;
+  display: flex;
+  background: white;
+}
+.services {
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+   grid-auto-rows: minmax(80px,auto);
+   grid-gap: .7rem;
+}
+.services > section {
+  margin: .5rem 0;
+  background: whitesmoke;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+.services > section  > section {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito Sans';
+}
+.services > section p {
+  font-family: 'Titillium Web';
+  line-height: 2rem;
+  letter-spacing: 1px;
+}
+.services .info {
+  margin: .5rem 0;
+}
+.services .info > span:last-child {
+  display: block;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+.ic {
+  display: block;
+  color: red;
+  font-size: 2.5rem;
+}
+.footer {
+  text-align: center;
+}
+.footer .users {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   gap: 1rem;
+}
+.footer .users > div {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-family: "Exo 2";
+  font-weight: bolder;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: .5rem 0;
+}
+.footers-info .users span {
+  display: block;
+  font-weight: bolder;
+}
+
+.footer .socials {
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  align-items: center;
+  margin: .8rem 0;
+}
+.footer .socials > a , .footer .socials > a:visited {
+  background: none;
+  text-decoration: none;
+  user-select: none;
+}
+
+.animate {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.remove {
+  animation-name: reverseslide;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+}
+@keyframes slide {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes reverseslide {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}

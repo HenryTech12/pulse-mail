@@ -4,14 +4,22 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.container{
+  margin: 1rem;
+}
+header > p {
+  font-family: 'Noto Sans';
+  font-weight: bolder;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin: 0.5rem 0;
+}
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: space-evenly;
   gap: 1rem;
-  margin: 1rem;
 }
 .content input {
   height: 3rem;

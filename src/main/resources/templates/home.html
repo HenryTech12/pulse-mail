@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html
+   xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" th:href="@{/css/home.css}" type="text/css" media="all" />
+<body>
+  <main class="container">
+   <form>
+    <div class="header">
+      <span class="material-symbols-outlined hIcon" id="open">menu_open</span>
+      <span class="labelH">Email Composer</span>
+      <button class="login">Log In</button>
+    </div>
+    
+    <div class="navbar">
+      <h2>Email Composer</h2>
+      <div class="line"></div>
+       <ol class="navbar-btns">
+         <li>
+           <button>
+             <i class="material-symbols-outlined">home_app_logo</i>
+             <span>Home</span>
+           </button>
+         </li>
+         <li>
+           <button>
+             <i class="material-symbols-outlined">input</i>
+             <span>Log In</span>
+           </button>
+         </li>
+         <li>
+           <button>
+             <i class="material-symbols-outlined">app_registration</i>
+             <span>Sign Up</span>
+           </button>
+         </li>
+         <li>
+           <button>
+             <i class="material-symbols-outlined">help</i>
+             <span>About Us</span>
+           </button>
+         </li>
+         
+         <li class="close">
+           <button id="close">
+             <i class="material-symbols-outlined">close</i>
+             <span>Close</span>
+           </button>
+         </li>
+       </ol>
+    </div>
+    
+    <div class="content">
+        <h2>Our Services</h2>  
+     <div class="services">
+      <section>
+         <section class="info">
+           <span class="material-symbols-outlined ic">package_2</span>
+              <span>SwiftSend</span>
+          </section>
+          <p>SwiftSend is responsible for composing, formatting, and delivering emails efficiently. It supports rich text editing, attachments, email scheduling, and bulk sending. The service integrates with SMTP providers like Gmail, Outlook, and custom mail servers to ensure reliable email delivery while tracking sent status and failures.
+          </p>
+      </section>
+        
+     <section>
+         <section class="info">
+           <span class="material-symbols-outlined ic">inbox</span>
+            <span>InboxFlow</span>
+         </section>
+        <p>InboxFlow handles incoming emails, categorizing them for better organization and real-time notifications. It integrates with IMAP/POP3 protocols to fetch emails from different providers while supporting threaded conversations, spam detection, and advanced search filters. Attachments preview and AI-based spam filtering enhance user experience.
+        </p>
+     </section> 
+    
+    <section>
+        <section class="info">
+          <span class="material-symbols-outlined ic">mop</span>
+          <span>CleanMail</span>
+        </section>
+       <p>
+         CleanMail manages email deletion by allowing soft deletes (moving emails to Trash) and permanent removal. It supports bulk deletion and retention policies, ensuring that deleted emails can be recovered within a set timeframe before being erased permanently.
+       </p>
+    </section>
+    
+    
+     <section>
+          <section class="info">
+            <span class="material-symbols-outlined ic">restore_from_trash</span>
+             <span>TrashGuard</span>
+           </section>
+  
+            <p>TrashGuard maintains deleted emails in a secure, temporary storage area before permanent deletion. Users can restore emails within a retention period, and automated cleanup policies help manage storage efficiently. Logging and audit trails ensure transparency in email recovery.</p>
+     </section>
+   
+    <section>
+        <section class="info">
+          <span class="material-symbols-outlined ic">shield_locked</span>
+           <span>ShieldMail</span>
+        </section>
+        <p>ShieldMail enhances email security with encryption, spam filtering, and phishing protection. It supports end-to-end encryption, two-factor authentication (2FA), and role-based access control to prevent unauthorized access. Advanced threat detection ensures safe email communication.
+        </p>
+    </section>
+    
+   </div>
+ </div>
+ 
+ <div class="footer">
+    <section class="footer-infos">
+       <h2>Email Composer</h2>
+     <section class="users">
+       <div>
+         <span>For Businesses and Enterprises</span>
+          <span>Educational Institutions</span>
+          <span>Freelancers and Professionas</span>
+        </div>
+        <div>
+          <span>Privacy-Conscious Users</span>
+          <span>Customer Support Teams</span>
+          <span>Government and Legal Organisations</span>
+        </div>
+     </section>
+     <div class="socials">
+       <a href="fg">
+         <img src="/assets/icons/facebook.png" width="40" height="40">
+       </a>
+       <a>
+         <img src="/assets/icons/social (1).png" width="40" height="40">
+       </a>
+       <a>
+         <img src="/assets/icons/social (3).png" width="40" height="40">
+       </a>
+     </div>
+    </section>
+ </div>
+ </form>
+</main>
+ <script th:src="@{/js/home.js}"></script>
+</body>
+
+</html>
