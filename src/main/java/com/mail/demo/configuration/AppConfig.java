@@ -1,4 +1,4 @@
-package com.mail.demo.config;
+package com.mail.demo.configuration;
 
 
 

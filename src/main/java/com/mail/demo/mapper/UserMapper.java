@@ -1,7 +1,7 @@
 package com.mail.demo.mapper;
 
 
-@Component
+@Service
 public class UserMapper {
 
 

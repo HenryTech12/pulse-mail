@@ -9,18 +9,18 @@ public class MailMapper {
 
 
        @Autowired
-        private MailMapper mailMapper;
+        private ModelMapper mapper;
 
          public MailDTO convert_mailmodel_to_maildto(MailModel mailModel) {
                 if(!Objects.isNull(mailModel)) 
-                     return mailMapper.map(mailModel, MailDTO.class);
+                     return mapper.map(mailModel, MailDTO.class);
                 else
                      return null;
         }
   
         public MailModel convert_maildto_to_mailmodel(MailDTO mailDto) {
                 if(!Objects.isNull(mailDto)) 
-                    return mailMapper.map(mailDto, MailModel.class);
+                    return mapper.map(mailDto, MailModel.class);
                 else
                    return null;
          }
