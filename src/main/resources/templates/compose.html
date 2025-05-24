@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html
+   xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" th:href="@{/css/compose.css}">
+</head>
+
+<body>
+   <main class="container">
+     <header>
+       <h2>Compose Your Mail</h2>
+      <p>Send emails quickly and efficiently with our easy-to-use mail composer. Simply enter the recipient's email, subject, and message, and hit send!</p>
+     </header>
+     <form th:object="${content}" method="post" enctype="multipart/form-data" th:action="@{/mail/compose/add}">
+       <input type="file" hidden id="myfile">
+     <div class="content">
+       <section class="icons">
+         <a class="button" href="#myfile">
+           <span class="material-symbols-outlined">attachment</span>
+         </a>
+         <button class="button">
+           <span class="material-symbols-outlined">send</span>
+         </button>
+       </section>
+       <input type="text" placeholder="From" th:field="*{fromEmail}">
+       <input type="text" placeholder="To" th:field="*{toEmail}">
+       <input type="text" placeholder="Subject" th:field="*{subject}">
+       <textarea placeholder="Compose email" th:field="*{body}"></textarea>
+     </div>
+     </form>
+   </main>
+</body>
+</html>

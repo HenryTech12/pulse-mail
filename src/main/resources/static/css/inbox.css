@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+* , *::before , *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+}
+/* || STYLE ICON */
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.2rem;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-right: 0.5rem;
+}
+.menu-icon, .menu-icon::after, .menu-icon::before {
+  width: 35px;
+  height: 5px;
+  background: black;
+  display: flex;
+  position: absolute;
+  transition: all 0.3s;
+}
+.menu-icon::after , .menu-icon::before {
+  content: " ";
+}
+.menu-icon::after {
+  transform: translateY(12px);
+}
+.menu-icon::before {
+  transform: translateY(-12px);
+}
+.menu-btn:hover .menu-icon {
+  background: transparent;
+}
+.menu-btn:hover .menu-icon::before {
+  transform: rotate(45deg);
+}
+.menu-btn:hover .menu-icon::after {
+  transform: rotate(-45deg);
+}
+.hc {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+}
+.hc input {
+  width: 100%;
+  height: 2.2rem;
+  outline: none;
+  padding-left: 0.5rem;
+  font-family: 'Titillium Web';
+}
+.limited-text {
+  font-family: monospace;
+  width: 40ch;          /* 40 characters wide */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.navbar {
+  width: 80%;
+}
+.navbar li {
+  border-top: 1px solid grey;
+}
+.navbar li:hover button {
+  background: #2CEBA5;
+  width: 100%;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  display: none;
+  animation-name: slide;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.navbar section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background: black;
+  height: 3rem;
+  color: white;
+  padding: 0 0.5rem;
+  font-family: cursive;
+}
+.navbar li button {
+  background: black;
+  color: white;
+  outline: none;
+  border: none;
+  height: 4rem;
+  width: 100%;
+  text-align: left;
+  padding-left: 0.5rem;
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Noto sans';
+}
+.cls {
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+.cls span {
+  font-size: 2rem;
+  color: white;
+}
+
+/* STYLING CONTENT */
+.content {
+  margin: 0.5rem;
+  font-family: 'Titillium Web'
+}
+.messages {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+.messages section > img {
+  width: 50px;
+  height: 50px;
+  object-position: center;
+}
+.messages .read {
+  width: fit-content;
+  overflow: hidden;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background: none;
+  outline: none;
+  border: none ;
+  justify-content: center;
+}
+.messages .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.messages .info > section {
+   display: flex;
+   flex-direction: column;
+}
+.messages .info > section span:first-child {
+   font-weight: bolder;
+   font-size: 1.5rem;
+}
+/* ANIMATION */
+@keyframes slide {
+  from {
+    position: absolute;
+    left: -1000px;
+  }
+  to {
+    display: block;
+    left: 0;
+  }
+}
