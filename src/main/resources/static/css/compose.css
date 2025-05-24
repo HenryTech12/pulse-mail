@@ -45,13 +45,21 @@ header > p {
   align-items: center;
   gap: 1.5rem;
 }
+<<<<<<< HEAD
 .icons .button {
+=======
+.icons button {
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
   width: 40px;
   align-content: center;
   border: none;
   outline: none;
 }
+<<<<<<< HEAD
 .icons .button span {
+=======
+.icons button span {
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
   font-size: 2.3rem;
 }
 ::placeholder {

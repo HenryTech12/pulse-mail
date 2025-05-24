@@ -1,5 +1,6 @@
 package com.mail.demo.controller;
 
+<<<<<<< HEAD
 import com.mail.demo.dto.MailDTO;
 import com.mail.demo.dto.MailType;
 import com.mail.demo.response.ComposeResponse;
@@ -11,21 +12,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.stereotype.Controller; 
 import com.mail.demo.service.*;
 import org.springframework.beans.factory.annotation.Value;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.mail.*;
+<<<<<<< HEAD
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.*;
 @Controller
 @RequestMapping("/mail")
+=======
+import java.util.*;
+@Controller
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 public class HomeController {
 
 
      @Autowired
+<<<<<<< HEAD
      private EmailSenderService mailSenderService;
 
      @Autowired
@@ -36,10 +47,16 @@ public class HomeController {
 
      private Logger logger = LoggerFactory.getLogger(HomeController.class);
     @GetMapping("/")
+=======
+      private EmailSenderService mailSenderService;
+  
+    @RequestMapping("/")
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
     public String home() {
          return "home";
     }
 
+<<<<<<< HEAD
     @GetMapping("/inbox")
     public String inbox(Model model) {
         model.addAttribute("type","Inbox");
@@ -107,4 +124,16 @@ public class HomeController {
     public Validator testAPI() {
         return apiService.getEmailValidation("fakorodehenry@gmail.com");
      }
+=======
+    @RequestMapping("/inbox")
+    public String inbox() {
+         return "inbox";
+    }
+
+     @RequestMapping("/compose")
+     public String compose() {
+        return "compose";
+     }
+
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 }

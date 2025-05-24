@@ -1,5 +1,6 @@
 package com.mail.demo.service;
 
+<<<<<<< HEAD
 import com.mail.demo.dto.MailDTO;
 import com.mail.demo.dto.MailType;
 import com.mail.demo.dto.Status;
@@ -7,6 +8,8 @@ import com.mail.demo.model.MailModel;
 import com.mail.demo.response.ComposeResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+=======
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 import org.springframework.mail.javamail.JavaMailSender;
 import jakarta.mail.internet.*;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,12 +18,15 @@ import org.springframework.stereotype.Service;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import jakarta.mail.*;
 import jakarta.mail.search.FlagTerm;
+<<<<<<< HEAD
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+=======
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 import java.util.*;
 
 @Service
@@ -33,6 +39,7 @@ public class EmailSenderService {
        private String from;
        @Value("${spring.mail.password}")
        private String password;
+<<<<<<< HEAD
        @Value("${mail.imap.host}")
        private String host;
        @Value("${mail.imap.port}")
@@ -116,4 +123,25 @@ public class EmailSenderService {
           //inbox.close(false);
           ///store.close();
       }*/
+=======
+
+      public void sendMail(MailDTO mailDto) {
+         try {
+             MimeMessage mime = mailSender.createMimeMessage();
+             MimeMessageHelper mail = new MimeMessageHelper(mime,true);
+             mail.setFrom(mailDto.getFrom());
+             mail.setTo(mailDto.getTo());
+             mail.setSubject(mailDto.getSubject());
+             mail.setText(mailDto.getBody());
+            
+             mailDto.setStatus(Status.MAIL_PENDING);
+             mailSender.send(mime);
+             mailDto.setStatus(Status.MAIL_SUCCESS);
+         }
+        catch(Exception e) {
+             mailDto.setStatus(Status.MAIL_FAILURE);
+            e.printStackTrace(); 
+          }
+     }
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 }
