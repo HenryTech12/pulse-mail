@@ -1,6 +1,15 @@
 package com.mail.demo.pagination;
 
 
+<<<<<<< HEAD
+import lombok.Data;
+
+public @Data class Sorting {
+	private String sortBy;
+	private int pageNo;
+	private int pageSize;
+}
+=======
 public class Sorting {
 
          private String sortBy;
@@ -39,3 +48,4 @@ public class Sorting {
 	{
 		return pageSize;
 	}}
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087

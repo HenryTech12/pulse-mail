@@ -17,6 +17,23 @@
        <h2>Compose Your Mail</h2>
       <p>Send emails quickly and efficiently with our easy-to-use mail composer. Simply enter the recipient's email, subject, and message, and hit send!</p>
      </header>
+<<<<<<< HEAD
+     <form th:object="${content}" method="post" enctype="multipart/form-data" th:action="@{/mail/compose/add}">
+       <input type="file" hidden id="myfile">
+     <div class="content">
+       <section class="icons">
+         <a class="button" href="#myfile">
+           <span class="material-symbols-outlined">attachment</span>
+         </a>
+         <button class="button">
+           <span class="material-symbols-outlined">send</span>
+         </button>
+       </section>
+       <input type="text" placeholder="From" th:field="*{fromEmail}">
+       <input type="text" placeholder="To" th:field="*{toEmail}">
+       <input type="text" placeholder="Subject" th:field="*{subject}">
+       <textarea placeholder="Compose email" th:field="*{body}"></textarea>
+=======
      <form>
      <div class="content">
        <section class="icons">
@@ -31,9 +48,13 @@
        <input type="text" placeholder="To">
        <input type="text" placeholder="Subject">
    <textarea placeholder="Compose email"></textarea>
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
      </div>
      </form>
    </main>
 </body>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 </html>

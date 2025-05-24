@@ -59,6 +59,16 @@
   padding-left: 0.5rem;
   font-family: 'Titillium Web';
 }
+<<<<<<< HEAD
+.limited-text {
+  font-family: monospace;
+  width: 40ch;          /* 40 characters wide */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+=======
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 .navbar {
   width: 80%;
 }

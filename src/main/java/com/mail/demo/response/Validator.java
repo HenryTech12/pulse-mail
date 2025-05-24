@@ -1,10 +1,21 @@
+<<<<<<< HEAD
+package com.mail.demo.response;
+=======
 package com.validator.test.dto;
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 
 import java.time.*;
 import java.util.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+<<<<<<< HEAD
+import lombok.Data;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Data
+=======
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 public class Validator
 {
 	private boolean valid;
@@ -19,6 +30,11 @@ public class Validator
 	List<String> possible_typo;
 	private String mx_ip;
 	private String mx_info;
+<<<<<<< HEAD
+	private String last_changed_at;
+	
+}
+=======
 	private LocalDate last_changed_at;
 	
 
@@ -151,3 +167,4 @@ public class Validator
 	{
 		return last_changed_at;
 	}}
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087

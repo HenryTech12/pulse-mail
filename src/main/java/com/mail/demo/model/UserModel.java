@@ -1,5 +1,23 @@
 package com.mail.demo.model;
 
+<<<<<<< HEAD
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Entity
+public @Data class UserModel {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	private String email;
+	private String username;
+	private String password;
+	@Lob
+	private String profileImage;
+        
+}
+=======
 
 public class UserModel {
 
@@ -61,3 +79,4 @@ public class UserModel {
 	{
 		return fileModel;
 	}}
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087

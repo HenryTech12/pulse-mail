@@ -1,6 +1,16 @@
 package com.mail.demo.dto;
 
 
+<<<<<<< HEAD
+import lombok.Data;
+
+public @Data class UserDTO {
+
+	private String email;
+	private String username;
+	private String password;
+}
+=======
 public class UserDTO {
 
         private String email;
@@ -48,3 +58,4 @@ public class UserDTO {
 	{
 		return fileDTO;
 	}}
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
