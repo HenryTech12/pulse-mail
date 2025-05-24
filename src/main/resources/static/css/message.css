@@ -75,7 +75,11 @@ body {
   font-family: 'Titillium Web';
 }
 .line {
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 90%;
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
   height: 0.1rem;
   background: darkgray;
   margin: 0 auto;

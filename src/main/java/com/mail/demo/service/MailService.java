@@ -1,6 +1,7 @@
 package com.mail.demo.service;
 
 
+<<<<<<< HEAD
 import com.mail.demo.dto.MailDTO;
 import com.mail.demo.dto.MailType;
 import com.mail.demo.mapper.MailMapper;
@@ -74,11 +75,30 @@ public class MailService {
     }
 
     public void updateMail(MailDTO previous, MailDTO next) {
+=======
+@Service
+public class MailService {
+
+
+      public void saveMail(MailDTO mailDto) {
+
+
+      }
+
+     public void updateMail(MailDTO previous, MailDTO next) {
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 
     }
 
     public void deleteMail(MailDTO mailDto) {
 
 
+<<<<<<< HEAD
     }
+=======
+     }
+
+    
+
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
 }

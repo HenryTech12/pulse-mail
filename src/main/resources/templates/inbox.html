@@ -38,11 +38,16 @@
          </section>
         <form>
          <li>
+<<<<<<< HEAD
            <button th:formaction="@{/mail/inbox}">
+=======
+           <button>
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
               <span class="material-symbols-outlined">inbox</span> 
             <span>Inbox</span>
            </button>
         </li>
+<<<<<<< HEAD
         <li>
            <button th:formaction="@{/mail/sent}">
               <span class="material-symbols-outlined">send</span>
@@ -51,24 +56,40 @@
         </li>
          <li>
            <button th:formaction="@{/mail/outbox}">
+=======
+         <li>
+           <button>
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
               <span class="material-symbols-outlined">outbox</span>
               <span>Outbox</span>
            </button>
          </li>
          <li>
+<<<<<<< HEAD
            <button th:formaction="@{/mail/compose}">
+=======
+           <button>
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
              <span class="material-symbols-outlined">edit_note</span>
              <span>Compose</span>
            </button>
          </li>
          <li>
+<<<<<<< HEAD
            <button th:formaction="@{/mail/recycle}">
+=======
+           <button>
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
              <span class="material-symbols-outlined">recycling</span>
              <span>Recycle</span>
            </button>
          </li>
          <li>
+<<<<<<< HEAD
            <button th:formaction="@{/mail/settings}">
+=======
+           <button>
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
              <span class="material-symbols-outlined">settings</span>
              <span>Settings</span>
            </button>
@@ -79,11 +100,19 @@
     
     <div class="content">
       <section>
+<<<<<<< HEAD
          <h3 th:text="${type}"></h3>
          <span>You have 2 unread messages</span>
       </section>
       
       <div class="messages" th:each="content, contentIndex : ${result}">
+=======
+         <h3>Inbox</h3>
+         <span>You have 2 unread messages</span>
+      </section>
+      
+      <div class="messages">
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
         <section>
           <img>
         </section>
@@ -91,6 +120,7 @@
         <section class="info">
          <section>
              <span>Igor Rand</span>
+<<<<<<< HEAD
              <span class="limited-text" th:text="${content.subject}"></span>
          </section>
             <span th:text="${contentIndex.index}"></span>
@@ -104,6 +134,17 @@
       </div>
     </div>
 
+=======
+             <span>Hey There , Are you doing today.</span>
+         </section>
+            <button class="read">
+              <span>11:05AM</span>
+              <span class="material-symbols-outlined">arrow_forward_ios</span>
+            </button>
+        </section>
+      </div>
+    </div>
+>>>>>>> 30836453590bb58632fb7071e90ae2c0c6a32087
   </main>
   <script th:src="@{/js/inbox.js}"></script>
 </body>
